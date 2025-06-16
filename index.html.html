@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Barbería Dani y Pablo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">💈 Barbería Prados del Campo</a>
+        <div class="header-extras">
+            <form id="search-form" autocomplete="off">
+                <input type="text" id="search-bar" placeholder="Buscar en la barbería..." list="sugerencias-busqueda">
+                <datalist id="sugerencias-busqueda"></datalist>
+                <button type="submit" id="btn-search">🔍</button>
+            </form>
+            <a href="https://www.google.com/maps/@6.1732297,-75.6498588,3a,75y,11.52h,64.82t/data=!3m8!1e1!3m6!1sQd2-63MsQGty-hVnqzn4Fw!2e0!5s20190101T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D25.175076538829842%26panoid%3DQd2-63MsQGty-hVnqzn4Fw%26yaw%3D11.516191538881275!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" id="btn-location">📍 Ubicación</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#bienvenida">Bienvenida</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#cita">Reservar Cita</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bienvenida" class="seccion-con-sombra seccion-bg">
+            <h2>👋 ¡Bienvenido a la mejor barbería de nuestro barrio!</h2>
+            <p class="parrafo-destacado">Ofrecemos cortes modernos, tradicionales y afeitados profesionales en un ambiente parchado y amigable.<br>Renueva tu estilo con nosotros. 💇‍♂️</p>
+        </section>
+
+        <div class="separador"></div>
+
+        <section id="servicios" class="seccion-con-sombra">
+            <h2>✂️ Servicios y Precios</h2>
+            <table>
+                <tr><th>Servicio</th><th>Costo</th></tr>
+                <tr><td>Corte de cabello clásico y moderno</td><td>$20.000</td></tr>
+                <tr><td>Afeitado tradicional con navaja</td><td>$15.000</td></tr>
+                <tr><td>Arreglo de barba y bigote</td><td>$10.000</td></tr>
+                <tr><td>Paquete para niños</td><td>$12.000</td></tr>
+            </table>
+        </section>
+
+        <div class="separador"></div>
+
+        <section id="galeria" class="seccion-con-sombra seccion-bg">
+            <h2>📸 Galería de Cortes</h2>
+            <div class="galeria-cortes">
+                <div class="corte-card">
+                    <img src="imagenes/des.jpg" alt="Corte Fade Clásico">
+                    <p>Fade clásico: degradado limpio y natural</p>
+                </div>
+                <div class="corte-card">
+                    <img src="imagenes/a.jpg" alt="Corte con diseño lateral tipo “El Siete”">
+                    <p>Corte con diseño lateral tipo “El Siete”</p>
+                </div>
+                <div class="corte-card">
+                    <img src="imagenes/f528b915-32de-4cf4-aec3-137ee92fac4f.jpg" alt="Fade con diseño en V">
+                    <p>Fade con diseño en V y textura superior</p>
+                </div>
+                <div class="corte-card">
+                    <img src="imagenes/R.jpg" alt="Desvanecido con líneas creativas">
+                    <p>Desvanecido con líneas creativas</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="separador"></div>
+
+        <section id="horarios" class="seccion-con-sombra">
+            <h2>🕒 Horarios de atención</h2>
+            <div class="horarios-card">
+                <p><span class="horario-dia">Lunes a Sábado:</span> 9:00 AM - 8:00 PM</p>
+                <p><span class="horario-dia">Domingo:</span> 10:00 AM - 2:00 PM</p>
+            </div>
+        </section>
+
+        <div class="separador"></div>
+
+        <section id="cita" class="seccion-con-sombra seccion-bg">
+            <h2>📅 Reservar Cita</h2>
+            <div id="reserva">
+                <label for="hora">Selecciona una hora disponible:</label>
+                <select id="hora"></select>
+                <button id="btn-wsp" onclick="pedirCita()">Reservar y enviar a WhatsApp</button>
+                <div id="mensaje"></div>
+            </div>
+            <div>
+                <h3>Disponibilidad de horarios</h3>
+                <ul id="disponibilidad"></ul>
+            </div>
+        </section>
+
+        <div class="separador"></div>
+
+        <section id="contacto" class="seccion-con-sombra">
+            <h2>📞 Contacto</h2>
+            <div class="contacto-card">
+                <p>Dirección: Cra 70 #56 A Sur 26</p>
+                <p>Teléfono: <a href="tel:+573194697123">+57 3194697123</a>, <a href="tel:+573234028002">+57 3234028002</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/pablobarber00?igsh=MW9xYmJjODFkeTFwaA==" target="_blank">@Danii_viilla63 , pablobarber00</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Barbería Dani y Pablo. Todos los derechos reservados.</p>
+    </footer>
+    <script src="barber.js"></script>
+</body>
+</html>
